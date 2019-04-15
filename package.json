@@ -1,0 +1,30 @@
+{
+  "name": "baby-name-generator",
+  "version": "1.0.0",
+  "description": "The Baby Name Generator is an app that allows users to generate random baby name(s). This can be customized based on gender, country, minimum length, maximum length, and names that start with a certain character only.",
+  "main": "src/server.js",
+  "scripts": {
+    "test": "set NODE_ENV=test&& jasmine",
+    "kill": "taskkill /IM node.exe /F",
+    "start": "node src/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JasonDuquain/Baby-Name-Generator.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JasonDuquain/Baby-Name-Generator/issues"
+  },
+  "homepage": "https://github.com/JasonDuquain/Baby-Name-Generator#readme",
+  "devDependencies": {
+    "jasmine": "^3.0.0"
+  },
+  "dependencies": {
+    "dotenv": "^5.0.0",
+    "ejs": "^2.5.7",
+    "express": "^4.16.2",
+    "request": "^2.83.0"
+  }
+}
