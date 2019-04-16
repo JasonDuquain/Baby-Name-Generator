@@ -1,6 +1,8 @@
 module.exports = {
+    
   init(app){
-    const staticRoutes = require("../routes/static");
-    app.use(staticRoutes);
+    const babyRoutes = require("../routes/baby");
+    app.use(babyRoutes);
   }
+    
 }

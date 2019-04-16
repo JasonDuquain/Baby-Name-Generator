@@ -1,20 +1,40 @@
+const request = require('request');
+const server = require('../../src/server');
+const base = 'http://localhost:3000';
+const uinames = 'https://uinames.com/api/';
 
-const request = require("request");
-const server = require("../../src/server");
-const base = "http://localhost:3000/";
 
-describe("routes : static", () => {
 
-  describe("GET /", () => {
+describe('routes : baby', () => {
 
-    it("should return status code 200", (done) => {
+    describe('GET /baby', () => {
 
-      request.get(base, (err, res, body) => {
-        expect(res.statusCode).toBe(200);
+        it('should return status code 200', (done) => {
+            request(`${base}/baby`, (error, response) => {
+                expect(response.statusCode).toBe(200);
+                done();
+            });
+        }); // it ("should return status code 200")
 
-        done();
-      });
-    });
+    }); // describe('GET /baby')
+    
+    describe('POST /baby', () => {
 
-  });
-});
+        it('should return status code 200', (done) => {
+            request({
+                method: 'POST',
+                url: `${base}/baby`
+            }, (error, response) => {
+                expect(response.statusCode).toBe(200);
+                
+                done();
+            });
+        }); // it ("should return status code 200")
+
+    }); // describe('GET /baby')
+    
+    
+    
+    
+
+}); // describe('routes : baby')
