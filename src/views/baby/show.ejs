@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Baby Name Generator</title>
+    <link rel="stylesheet" href="/css/application.css">
+</head>
+<body>
+    <header class="header">
+        <h1 class="header__title">
+            Baby Name Generator
+        </h1>
+    </header>
+    
+    <div class="intro">
+        <p class="intro__para">
+            
+            INTRO HERE
+            
+        </p>
+    </div>
+    
+    <div class="main">
+        
+        <div class="results">
+            
+            <ul class="results__list">
+               
+               <%# If only 1 name is returned it is an object, NOT an array so check the length %>
+                <% if (names.length > 1) { %>
+                    
+                    <h3 class="results__heading" style="margin-bottom: 1em;">You searched for <%= names.length %> baby names</h3>
+
+                    <% names.forEach(name => { %>
+                    
+                        <li class="results__item">Your baby&apos;s name is <%= name.name %> and your baby is from <%= name.region %></li>
+                    
+                    <% }) %>
+                      
+                <% }  else if (names) { %>
+                  
+                   <h3 class="results__heading" style="margin-bottom: 1em;">You searched for 1 baby name</h3>
+                
+                   <li class="results__item">Your baby&apos;s name is <%= names.name%> and your baby is from <%= names.region %></li>
+                <% } %>
+               
+            </ul>
+            
+        </div>
+        
+        <a href="/" class="results__repeat">Search Again</a>
+        
+    </div>
+    
+    <footer class="footer">
+        FOOTER HERE
+    </footer>
+</body>
+</html>
