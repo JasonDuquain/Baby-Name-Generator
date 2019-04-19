@@ -6,7 +6,7 @@
   "scripts": {
     "test": "set NODE_ENV=test&& jasmine",
     "kill": "taskkill /IM node.exe /F",
-    "start": "nodemon src/server.js -e js,ejs"
+    "start": "node src/server.js"
   },
   "repository": {
     "type": "git",
