@@ -5,6 +5,7 @@ The Baby Name Generator is an app that allows users to generate random baby name
 [comment]: <> (# Live site)
 [comment]: <> ([Baby Name Generator] (ADD URL))
 
+
 ## Getting Started
 
 * Clone
