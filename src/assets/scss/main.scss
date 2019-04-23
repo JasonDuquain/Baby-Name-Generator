@@ -1,3 +1,59 @@
+$primaryColor: #9ec4c5;
+$secondaryColor: #f5e4dc;
+
+@font-face {
+    font-family: 'claire_handbold';
+    src: url('../css/fonts/clairehandbold-webfont.woff2') format('woff2'),
+         url('../css/fonts/clairehandbold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'claire_handbold';
+    src: url('../css/fonts/clairehandbold-webfont.woff2') format('woff2'),
+         url('../css/fonts/clairehandbold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'claire_handlight';
+    src: url('../css/fonts/clairehandlight-webfont.woff2') format('woff2'),
+         url('../css/fonts/clairehandlight-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'claire_handlight';
+    src: url('../css/fonts/clairehandlight-webfont.woff2') format('woff2'),
+         url('../css/fonts/clairehandlight-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'claire_handregular';
+    src: url('../css/fonts/clairehandregular-webfont.woff2') format('woff2'),
+         url('../css/fonts/clairehandregular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'claire_handregular';
+    src: url('../css/fonts/clairehandregular-webfont.woff2') format('woff2'),
+         url('../css/fonts/clairehandregular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
 :root {
     box-sizing: border-box;
 }
@@ -10,6 +66,38 @@
     padding: 0;
 }
 
-.header, .intro, .footer, .main, .main__group {
+body {
+    font-family: 'claire_handregular';
+    background-color: $secondaryColor;
+}
+
+.header {
+    padding: 3em 2em; 
+    background-image: url(../img/header-bg.jpg);
+    background-size: cover;
+    
+    &__title {
+        font-family: 'Luckiest Guy', cursive;
+        color: #fff;
+        font-size: 2.5em;
+        letter-spacing: 3px;
+        text-align: center;
+    }
+}
+
+.intro {
+    padding: 3em 2em;
+    line-height: 1.4;
+    font-size: 1.2em;
+    
+    &__para {
+        width: 80%;
+        margin: 0 auto;
+    }
+    
+}
+
+
+footer, .main, .main__group {
     margin: 2em 2em;
 }

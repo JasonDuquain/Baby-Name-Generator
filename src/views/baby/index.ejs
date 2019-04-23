@@ -1,9 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
     <title>Baby Name Generator</title>
-    <link rel="stylesheet" href="/css/main.css">
+    <% include ../partials/head.ejs %>
 </head>
 <body>
     <header class="header">
@@ -14,14 +13,12 @@
     
     <div class="intro">
         <p class="intro__para">
-            
-            INTRO HERE
-            
+            Are you and your significant other unable to decide on a name for your new baby? Did you try to give your baby the most unique name possible and now regret it? (name change forms only <a href="https://info.legalzoom.com/steps-legally-change-name-20369.html" target="_blank">cost about $100</a>) Let fate decide by using the baby name generator. Customizable by gender, region and total names. You can even generate an email address for your unborn baby!
         </p>
     </div>
     
     <div class="main">
-        
+        <i class="fas fa-venus-mars"></i>
         
         <form action="/baby" class="main__form" method="post">
             
@@ -44,13 +41,13 @@
             </p>
             <p class="main__group">
                 <label for="amount">How many names?</label>
-                <input type="text" name="amount" id="amount" value="1" required>
+                <input type="number" name="amount" id="amount" value="1" required>
             </p>
             
             <p class="main__group">
                <label for="ext">Would you like an email address for your baby?</label>
                 <input type="radio" name="ext" value="yes">Yes
-                <input type="radio" name="ext" value="no">No
+                <input type="radio" name="ext" value="no" checked>No
             </p>
             
             
@@ -61,7 +58,7 @@
     </div>
     
     <footer class="footer">
-        FOOTER HERE
+        <a href="https://www.freepik.com/free-photos-vectors/background">Background vector created by freepik - www.freepik.com</a>
     </footer>
 </body>
 </html>
