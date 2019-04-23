@@ -1,30 +1,33 @@
 {
-  "name": "baby-name-generator",
-  "version": "1.0.0",
-  "description": "The Baby Name Generator is an app that allows users to generate random baby name(s). This can be customized based on gender, country, minimum length, maximum length, and names that start with a certain character only.",
-  "main": "src/server.js",
-  "scripts": {
-    "test": "set NODE_ENV=test&& jasmine",
-    "kill": "taskkill /IM node.exe /F",
-    "start": "node src/server.js"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/JasonDuquain/Baby-Name-Generator.git"
-  },
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/JasonDuquain/Baby-Name-Generator/issues"
-  },
-  "homepage": "https://github.com/JasonDuquain/Baby-Name-Generator#readme",
-  "devDependencies": {
-    "jasmine": "^3.0.0"
-  },
-  "dependencies": {
-    "dotenv": "^5.0.0",
-    "ejs": "^2.5.7",
-    "express": "^4.16.2",
-    "request": "^2.83.0"
-  }
+    "name": "baby-name-generator",
+    "version": "1.0.0",
+    "description": "The Baby Name Generator is an app that allows users to generate random baby name(s) with an optional email address. This can be customized based on gender, country and total names",
+    "main": "src/server.js",
+    "scripts": {
+        "test": "set NODE_ENV=test&& jasmine",
+        "kill": "taskkill /IM node.exe /F",
+        "start": "node src/server.js",
+        "build-css": "node-sass --include-path scss src/assets/scss/main.scss src/assets/css/main.css",
+        "watch-css": "nodemon -e scss -x \"npm run build-css\""
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/JasonDuquain/Baby-Name-Generator.git"
+    },
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/JasonDuquain/Baby-Name-Generator/issues"
+    },
+    "homepage": "https://github.com/JasonDuquain/Baby-Name-Generator#readme",
+    "devDependencies": {
+        "jasmine": "^3.0.0",
+        "node-sass": "^4.11.0"
+    },
+    "dependencies": {
+        "dotenv": "^5.0.0",
+        "ejs": "^2.5.7",
+        "express": "^4.16.2",
+        "request": "^2.83.0"
+    }
 }
