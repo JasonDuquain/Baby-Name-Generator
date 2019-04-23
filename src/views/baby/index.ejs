@@ -35,8 +35,11 @@
             <p class="main__group">
                 <label for="region">Country</label>
                 <select name="region" id="region">
-                    <option value="france">France</option>
-                    <option value="england">England</option>
+                   
+                    <% namesArray.map((name) => { %>         
+                        <option value="<%= name.region %>"><%= name.region %></option>
+                    <% }); %>
+                    
                 </select>
             </p>
             <p class="main__group">
