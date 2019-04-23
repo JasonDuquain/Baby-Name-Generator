@@ -33,7 +33,13 @@
 
                     <% names.forEach(name => { %>
                     
-                        <li class="results__item">Your baby&apos;s name is <%= name.name %> and your baby is from <%= name.region %></li>
+                        <li class="results__item">Your baby&apos;s name is <%= name.name %> and your baby is from <%= name.region %>. 
+                        
+                            <% if (name.email) { %> 
+                                Your baby&apos;s email address is <%= name.email %>
+                            <% } %>
+                            
+                        </li>
                     
                     <% }) %>
                       
@@ -41,7 +47,13 @@
                   
                    <h3 class="results__heading" style="margin-bottom: 1em;">You searched for 1 baby name</h3>
                 
-                   <li class="results__item">Your baby&apos;s name is <%= names.name %> and your baby is from <%= names.region %></li>
+                   <li class="results__item">Your baby&apos;s name is <%= names.name %> and your baby is from <%= names.region %>
+                   
+                       <% if (names.email) { %> 
+                            Your baby&apos;s email address is <%= names.email %>
+                       <% } %>
+                   
+                   </li>
                 <% } %>
                
             </ul>

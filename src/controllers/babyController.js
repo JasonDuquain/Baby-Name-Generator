@@ -19,15 +19,15 @@ module.exports = {
         let amount = parseInt(req.body.amount);
         let region = req.body.region;
         let minlen = parseInt(req.body.minlen);
-        //let maxlen = parseInt(req.body.maxlen);
         request({
             method: 'POST',
-            url: `${uinames}?gender=${gender}&region=${region}&amount=${amount}&minlen=${minlen}`
+            url: `${uinames}?gender=${gender}&region=${region}&amount=${amount}${(req.body.ext === 'yes' ? '&ext' : '')}`
         }, (error, response) => {
-            
-            // The returned data is in string format so convert to an object in order to loop over it:
+            // The returned data is in stg format so convert to an obj in order to loop over it:
             let names = JSON.parse(response.body);
-            res.render('baby/show', {names: names})
+            res.render('baby/show', {
+                names: names
+            });
         });
     }
 }
