@@ -42,6 +42,20 @@ describe('routes : baby', () => {
 
     }); 
     
+    describe('GET /baby', () => {
+
+        it('should dynamically return the region names', (done) => {
+            request(base, (error, response) => {
+                expect(response.body).toContain('Azerbaijan');
+                expect(response.body).toContain('Vietnam');
+                expect(error).toBeNull();
+                done();
+            });
+        }); // it('should dynamically return the region names')
+        
+    }); // describe('GET /baby')
+    
+    
     
     
 
