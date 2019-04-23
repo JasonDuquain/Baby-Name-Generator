@@ -15,13 +15,14 @@ describe('routes : baby', () => {
             request(`${base}`, (error, response) => {
                 expect(response.statusCode).toBe(200);
                 expect(response.body).toContain('Baby Name Generator');
+                expect(error).toBeNull();
                 done();
             });
         }); // it ("should return status code 200")
 
     }); // describe('GET /baby')
     
-    describe('POST /baby', () => {
+    describe('POST /baby?gender=female&region=england&amount=5', () => {
 
         it('should return status code 200', (done) => {
             request({
@@ -34,13 +35,12 @@ describe('routes : baby', () => {
                 }
             }, (error, response) => {
                 expect(response.statusCode).toBe(200);
-                expect(response.body).toContain('You searched for')
+                expect(error).toBeNull();
                 done();
             });
         }); // it ("should return status code 200")
 
-    }); // describe('GET /baby')
-    
+    }); 
     
     
     

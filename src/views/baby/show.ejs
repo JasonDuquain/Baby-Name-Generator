@@ -26,7 +26,7 @@
             
             <ul class="results__list">
                
-               <%# If only 1 name is returned it is an object, NOT an array so check the length %>
+               
                 <% if (names.length > 1) { %>
                     
                     <h3 class="results__heading" style="margin-bottom: 1em;">You searched for <%= names.length %> baby names</h3>
@@ -41,7 +41,7 @@
                   
                    <h3 class="results__heading" style="margin-bottom: 1em;">You searched for 1 baby name</h3>
                 
-                   <li class="results__item">Your baby&apos;s name is <%= names.name%> and your baby is from <%= names.region %></li>
+                   <li class="results__item">Your baby&apos;s name is <%= names.name %> and your baby is from <%= names.region %></li>
                 <% } %>
                
             </ul>
