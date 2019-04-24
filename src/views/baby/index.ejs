@@ -18,47 +18,66 @@
     </div>
     
     <div class="main">
-        <i class="fas fa-venus-mars"></i>
+
         
         <form action="/baby" class="main__form" method="post">
             
             <p class="main__group">
-                <label for="gender">Gender</label>
-                <select name="gender" id="gender">
-                    <option value="male">Male</option>
-                    <option value="female">Female</option>
-                </select>
+                <label for="gender" class="main__label">Gender</label>
+                <span class="main__input-wrap">
+                   <span class="main__icon-wrap"><i class="fas fa-venus-mars main__icon"></i></span>
+                    <select name="gender" id="gender" class="main__select">
+                        <option value="male">Male</option>
+                        <option value="female">Female</option>
+                    </select>
+                 </span>
             </p>
             <p class="main__group">
-                <label for="region">Country</label>
-                <select name="region" id="region">
-                   
-                    <% namesArray.map((name) => { %>         
-                        <option value="<%= name.region %>"><%= name.region %></option>
-                    <% }); %>
-                    
-                </select>
+                <label for="region" class="main__label">Country</label>
+                <span class="main__input-wrap">
+                    <span class="main__icon-wrap"><i class="fas fa-globe-europe main__icon"></i></span>
+                    <select name="region" id="region" class="main__select">
+
+                        <% namesArray.map((name) => { %>         
+                            <option value="<%= name.region %>"><%= name.region %></option>
+                        <% }); %>
+
+                    </select>
+                </span>
             </p>
             <p class="main__group">
-                <label for="amount">How many names?</label>
-                <input type="number" name="amount" id="amount" value="1" required>
+                <label for="amount" class="main__label">How many names?</label>
+                <span class="main__input-wrap">
+                    <span class="main__icon-wrap"><i class="fas fa-list-ol main__icon"></i></span>
+                    <input type="number" name="amount" id="amount" value="1" min="1" max="100" class="main__input" required>
+                </span>
             </p>
             
             <p class="main__group">
-               <label for="ext">Would you like an email address for your baby?</label>
-                <input type="radio" name="ext" value="yes">Yes
-                <input type="radio" name="ext" value="no" checked>No
+               <label for="ext" class="main__label">Email address for your baby?</label>
+               <span class="main__radio-wrap">
+                    <input type="radio" name="ext" value="yes" class="main__radio">Yes
+                    <input type="radio" name="ext" value="no" class="main__radio" checked>No
+               </span>
             </p>
             
             
-            <button class="main__submit">Find Names</button>
+            <div class="main__submit-wrap">
+                <button class="main__submit">Find Names</button>
+            </div>
             
         </form>
         
     </div>
     
     <footer class="footer">
-        <a href="https://www.freepik.com/free-photos-vectors/background">Background vector created by freepik - www.freepik.com</a>
+        <p class="footer__copyright">&copy; <span class="footer__year">2017</span> Jason Duquain - All rights reserved</p>
+        <a href="https://www.freepik.com/free-photos-vectors/background" class="footer__meh">Background vector created by freepik - www.freepik.com</a>
     </footer>
+    
+    <script src="/js/TweenMax.min.js"></script>
+    <script src="/js/ScrambleTextPlugin.min.js"></script>
+    <script src="/js/script.js"></script>
+    
 </body>
 </html>
