@@ -13,13 +13,17 @@
     
     <div class="intro">
         <p class="intro__para">
-            Are you and your significant other unable to decide on a name for your new baby? Did you try to give your baby the most unique name possible and now regret it? (name change forms only <a href="https://info.legalzoom.com/steps-legally-change-name-20369.html" target="_blank">cost about $100</a>) Let fate decide by using the baby name generator. Customizable by gender, region and total names. You can even generate an email address for your unborn baby!
+            Are you and your significant other unable to decide on a name for your new baby? <br>
+            Did you try to give your baby the most unique name possible and now regret it? <br>
+            <span class="intro__small">(name change forms only <a class="intro__link" href="https://info.legalzoom.com/steps-legally-change-name-20369.html" target="_blank">cost about $100</a>)</span><br>
+            Let fate decide by using the baby name generator.<br> 
+            Customizable by gender, region and total names. <br> 
+            You can even generate an email address for your unborn baby!
         </p>
     </div>
     
     <div class="main">
 
-        
         <form action="/baby" class="main__form" method="post">
             
             <p class="main__group">
@@ -62,7 +66,7 @@
             </p>
             
             
-            <div class="main__submit-wrap">
+            <div class="main__submit-wrap hay">
                 <button class="main__submit">Find Names</button>
             </div>
             
@@ -70,13 +74,11 @@
         
     </div>
     
-    <footer class="footer">
-        <p class="footer__copyright">&copy; <span class="footer__year">2017</span> Jason Duquain - All rights reserved</p>
-        <a href="https://www.freepik.com/free-photos-vectors/background" class="footer__meh">Background vector created by freepik - www.freepik.com</a>
-    </footer>
+    <% include ../partials/footer.ejs %>
     
     <script src="/js/TweenMax.min.js"></script>
     <script src="/js/ScrambleTextPlugin.min.js"></script>
+    <script src="/js/SplitText.min.js"></script>
     <script src="/js/script.js"></script>
     
 </body>

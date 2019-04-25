@@ -67,6 +67,9 @@ $secondaryColor: #f5e4dc;
 body {
     font-family: 'claire_handregular';
     background-color: $secondaryColor;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
 .header {
@@ -85,17 +88,26 @@ body {
 
 .intro {
     padding: 3em 2em;
-    line-height: 1.4;
-    font-size: 1.2em;
+    line-height: 1.8;
     
     &__para {
-        width: 80%;
+        width: 55%;
         margin: 0 auto;
     }
     
+    &__link, &__link:visited {
+        color: darken($primaryColor, 15%);
+               
+        &:hover {
+           color: darken($primaryColor, 30%); 
+        }
+      
+    }
+
 }
 
 .main {
+    flex: 1;
     
     &__group {
         display: grid;
@@ -170,10 +182,16 @@ body {
         border-radius: 3px;
         border: none;
         cursor: pointer;
-        transition: background-color 300ms ease-in;
+        box-shadow: 2px 4px 4px rgba(0,0,0,.4);
+        transition: all 200ms ease-in;
         
         &:hover {
             background-color: darken($secondaryColor, 30%);
+        }
+        
+        &:active {
+            box-shadow: 0 2px 3px rgba(0,0,0,.4);
+            transform: translateY(2px);
         }
     }
     
@@ -183,7 +201,7 @@ body {
 
 .footer {
     font-size: .8em;
-    background-color: #3e3a3a;
+    background-color: darken($primaryColor, 10%);
     padding: 3em 2em;
     color: #e3dcdc;
     text-align: center;
