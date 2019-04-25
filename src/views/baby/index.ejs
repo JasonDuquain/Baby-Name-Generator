@@ -1,9 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
     <title>Baby Name Generator</title>
-    <link rel="stylesheet" href="/css/main.css">
+    <% include ../partials/head.ejs %>
 </head>
 <body>
     <header class="header">
@@ -14,54 +13,73 @@
     
     <div class="intro">
         <p class="intro__para">
-            
-            INTRO HERE
-            
+            Are you and your significant other unable to decide on a name for your new baby? <br>
+            Did you try to give your baby the most unique name possible and now regret it? <br>
+            <span class="intro__small">(name change forms only <a class="intro__link" href="https://info.legalzoom.com/steps-legally-change-name-20369.html" target="_blank">cost about $100</a>)</span><br>
+            Let fate decide by using the baby name generator.<br> 
+            Customizable by gender, region and total names. <br> 
+            You can even generate an email address for your unborn baby!
         </p>
     </div>
     
     <div class="main">
-        
-        
+
         <form action="/baby" class="main__form" method="post">
             
             <p class="main__group">
-                <label for="gender">Gender</label>
-                <select name="gender" id="gender">
-                    <option value="male">Male</option>
-                    <option value="female">Female</option>
-                </select>
+                <label for="gender" class="main__label">Gender</label>
+                <span class="main__input-wrap">
+                   <span class="main__icon-wrap"><i class="fas fa-venus-mars main__icon"></i></span>
+                    <select name="gender" id="gender" class="main__select">
+                        <option value="male">Male</option>
+                        <option value="female">Female</option>
+                    </select>
+                 </span>
             </p>
             <p class="main__group">
-                <label for="region">Country</label>
-                <select name="region" id="region">
-                   
-                    <% namesArray.map((name) => { %>         
-                        <option value="<%= name.region %>"><%= name.region %></option>
-                    <% }); %>
-                    
-                </select>
+                <label for="region" class="main__label">Country</label>
+                <span class="main__input-wrap">
+                    <span class="main__icon-wrap"><i class="fas fa-globe-europe main__icon"></i></span>
+                    <select name="region" id="region" class="main__select">
+
+                        <% namesArray.map((name) => { %>         
+                            <option value="<%= name.region %>"><%= name.region %></option>
+                        <% }); %>
+
+                    </select>
+                </span>
             </p>
             <p class="main__group">
-                <label for="amount">How many names?</label>
-                <input type="text" name="amount" id="amount" value="1" required>
+                <label for="amount" class="main__label">How many names?</label>
+                <span class="main__input-wrap">
+                    <span class="main__icon-wrap"><i class="fas fa-list-ol main__icon"></i></span>
+                    <input type="number" name="amount" id="amount" value="1" min="1" max="100" class="main__input" required>
+                </span>
             </p>
             
             <p class="main__group">
-               <label for="ext">Would you like an email address for your baby?</label>
-                <input type="radio" name="ext" value="yes">Yes
-                <input type="radio" name="ext" value="no">No
+               <label for="ext" class="main__label">Email address for your baby?</label>
+               <span class="main__radio-wrap">
+                    <input type="radio" name="ext" value="yes" class="main__radio">Yes
+                    <input type="radio" name="ext" value="no" class="main__radio" checked>No
+               </span>
             </p>
             
             
-            <button class="main__submit">Find Names</button>
+            <div class="main__submit-wrap hay">
+                <button class="main__submit">Find Names</button>
+            </div>
             
         </form>
         
     </div>
     
-    <footer class="footer">
-        FOOTER HERE
-    </footer>
+    <% include ../partials/footer.ejs %>
+    
+    <script src="/js/TweenMax.min.js"></script>
+    <script src="/js/ScrambleTextPlugin.min.js"></script>
+    <script src="/js/SplitText.min.js"></script>
+    <script src="/js/script.js"></script>
+    
 </body>
 </html>

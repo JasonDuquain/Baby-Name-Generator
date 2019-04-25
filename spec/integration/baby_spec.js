@@ -5,7 +5,9 @@ const uinames = 'https://uinames.com/api/';
 
 jasmine.DEFAULT_TIMEOUT_INTERVAL = 9000;
 
-
+beforeAll(function(done) {
+  window.addEventListener
+});
 
 describe('routes : baby', () => {
 
@@ -13,6 +15,7 @@ describe('routes : baby', () => {
 
         it('should return status code 200', (done) => {
             request(`${base}`, (error, response) => {
+                console.log(response.body)
                 expect(response.statusCode).toBe(200);
                 expect(response.body).toContain('Baby Name Generator');
                 expect(error).toBeNull();
@@ -76,6 +79,18 @@ describe('routes : baby', () => {
         
     }); // describe('GET /baby?gender=female&region=england&amount=5&ext')
     
-    
+    describe('GET /baby', () => {
+
+        // The button with the text 'Find Names' is the last element to animate in
+        it('should have the text "Find names"', (done) => {
+            request(base, (error, response) => {
+                expect(response.body).toContain('Find Names');
+                expect(error).toBeNull();
+                done();
+            });
+        }); // it('should have the text "find names"')
+        
+    }); // describe('GET /baby')
+
 
 }); // describe('routes : baby')

@@ -1,3 +1,57 @@
+$primaryColor: #9ec4c5;
+$secondaryColor: #f5e4dc;
+
+
+
+@font-face {
+    font-family: 'claire_handbold';
+    src: url('../css/fonts/clairehandbold-webfont.woff2') format('woff2'),
+         url('../css/fonts/clairehandbold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'claire_handbold';
+    src: url('../css/fonts/clairehandbold-webfont.woff2') format('woff2'),
+         url('../css/fonts/clairehandbold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'claire_handlight';
+    src: url('../css/fonts/clairehandlight-webfont.woff2') format('woff2'),
+         url('../css/fonts/clairehandlight-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'claire_handlight';
+    src: url('../css/fonts/clairehandlight-webfont.woff2') format('woff2'),
+         url('../css/fonts/clairehandlight-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'claire_handregular';
+    src: url('../css/fonts/clairehandregular-webfont.woff2') format('woff2'),
+         url('../css/fonts/clairehandregular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'claire_handregular';
+    src: url('../css/fonts/clairehandregular-webfont.woff2') format('woff2'),
+         url('../css/fonts/clairehandregular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
 :root {
     box-sizing: border-box;
 }
@@ -10,6 +64,152 @@
     padding: 0;
 }
 
-.header, .intro, .footer, .main, .main__group {
-    margin: 2em 2em;
+body {
+    font-family: 'claire_handregular';
+    background-color: $secondaryColor;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.header {
+    padding: 3em 2em; 
+    background-image: url(../img/header-bg.jpg);
+    background-size: cover;
+    
+    &__title {
+        font-family: 'Luckiest Guy', cursive;
+        color: #fff;
+        font-size: 2.5em;
+        letter-spacing: 3px;
+        text-align: center;
+    }
+}
+
+.intro {
+    padding: 3em 2em;
+    line-height: 1.8;
+    
+    &__para {
+        width: 55%;
+        margin: 0 auto;
+    }
+    
+    &__link, &__link:visited {
+        color: darken($primaryColor, 15%);
+               
+        &:hover {
+           color: darken($primaryColor, 30%); 
+        }
+      
+    }
+
+}
+
+.main {
+    flex: 1;
+    
+    &__group {
+        display: grid;
+        align-items: center;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 1em;
+        margin: 2em 5em;
+        width: 65%;
+    } 
+    
+    &__label {
+        justify-self: end;
+        text-align: right;
+    }
+    
+    &__input-wrap {
+        display: flex;
+    }
+    
+    &__icon-wrap {
+        flex: 0 0 2.2em;
+        background-color: darken($secondaryColor, 20%);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 3px 0 0 3px;
+        color: #fff;
+        transition: all 300ms ease-in;
+        
+        &.focus {
+            background-color: #e0d5d5;
+            color: darken($secondaryColor, 20%);
+        }
+    }
+    
+    &__input, &__select {
+        font-family: inherit;
+        color: inherit;
+        flex: 1;
+        width: 100%;
+        padding: .5em;
+        border-radius: 0 3px 3px 0;
+        border: none;
+        
+        &:hover {
+            cursor: pointer;
+        }
+        
+        &:focus {
+            outline: none;
+        }
+    }
+    
+    &__radio {
+        margin-right: .3em;
+    }
+    
+    &__radio + &__radio {
+        margin-left: 1em;
+    }
+    
+    &__submit-wrap {
+        margin: 2em 0;
+        text-align: center;
+    }
+    
+    &__submit {
+        padding: .6em 1em;
+        font: inherit;
+        color: #fff;
+        background-color: darken($secondaryColor, 20%);
+        border-radius: 3px;
+        border: none;
+        cursor: pointer;
+        box-shadow: 2px 4px 4px rgba(0,0,0,.4);
+        transition: all 200ms ease-in;
+        
+        &:hover {
+            background-color: darken($secondaryColor, 30%);
+        }
+        
+        &:active {
+            box-shadow: 0 2px 3px rgba(0,0,0,.4);
+            transform: translateY(2px);
+        }
+    }
+    
+    
+}
+
+
+.footer {
+    font-size: .8em;
+    background-color: darken($primaryColor, 10%);
+    padding: 3em 2em;
+    color: #e3dcdc;
+    text-align: center;
+    
+    &__meh {
+        font-size: .8em; 
+        margin-top: .3em;
+        color: inherit;
+    }
+    
 }

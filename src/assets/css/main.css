@@ -1,3 +1,39 @@
+@font-face {
+  font-family: 'claire_handbold';
+  src: url("../css/fonts/clairehandbold-webfont.woff2") format("woff2"), url("../css/fonts/clairehandbold-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'claire_handbold';
+  src: url("../css/fonts/clairehandbold-webfont.woff2") format("woff2"), url("../css/fonts/clairehandbold-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'claire_handlight';
+  src: url("../css/fonts/clairehandlight-webfont.woff2") format("woff2"), url("../css/fonts/clairehandlight-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'claire_handlight';
+  src: url("../css/fonts/clairehandlight-webfont.woff2") format("woff2"), url("../css/fonts/clairehandlight-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'claire_handregular';
+  src: url("../css/fonts/clairehandregular-webfont.woff2") format("woff2"), url("../css/fonts/clairehandregular-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'claire_handregular';
+  src: url("../css/fonts/clairehandregular-webfont.woff2") format("woff2"), url("../css/fonts/clairehandregular-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+
 :root {
   box-sizing: border-box; }
 
@@ -8,5 +44,103 @@
   margin: 0;
   padding: 0; }
 
-.header, .intro, .footer, .main, .main__group {
-  margin: 2em 2em; }
+body {
+  font-family: 'claire_handregular';
+  background-color: #f5e4dc;
+  height: 100vh;
+  display: flex;
+  flex-direction: column; }
+
+.header {
+  padding: 3em 2em;
+  background-image: url(../img/header-bg.jpg);
+  background-size: cover; }
+  .header__title {
+    font-family: 'Luckiest Guy', cursive;
+    color: #fff;
+    font-size: 2.5em;
+    letter-spacing: 3px;
+    text-align: center; }
+
+.intro {
+  padding: 3em 2em;
+  line-height: 1.8; }
+  .intro__para {
+    width: 55%;
+    margin: 0 auto; }
+  .intro__link, .intro__link:visited {
+    color: #6ea7a8; }
+    .intro__link:hover, .intro__link:visited:hover {
+      color: #4c7d7e; }
+
+.main {
+  flex: 1; }
+  .main__group {
+    display: grid;
+    align-items: center;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 1em;
+    margin: 2em 5em;
+    width: 65%; }
+  .main__label {
+    justify-self: end;
+    text-align: right; }
+  .main__input-wrap {
+    display: flex; }
+  .main__icon-wrap {
+    flex: 0 0 2.2em;
+    background-color: #dea78d;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 3px 0 0 3px;
+    color: #fff;
+    transition: all 300ms ease-in; }
+    .main__icon-wrap.focus {
+      background-color: #e0d5d5;
+      color: #dea78d; }
+  .main__input, .main__select {
+    font-family: inherit;
+    color: inherit;
+    flex: 1;
+    width: 100%;
+    padding: .5em;
+    border-radius: 0 3px 3px 0;
+    border: none; }
+    .main__input:hover, .main__select:hover {
+      cursor: pointer; }
+    .main__input:focus, .main__select:focus {
+      outline: none; }
+  .main__radio {
+    margin-right: .3em; }
+  .main__radio + .main__radio {
+    margin-left: 1em; }
+  .main__submit-wrap {
+    margin: 2em 0;
+    text-align: center; }
+  .main__submit {
+    padding: .6em 1em;
+    font: inherit;
+    color: #fff;
+    background-color: #dea78d;
+    border-radius: 3px;
+    border: none;
+    cursor: pointer;
+    box-shadow: 2px 4px 4px rgba(0, 0, 0, 0.4);
+    transition: all 200ms ease-in; }
+    .main__submit:hover {
+      background-color: #d38865; }
+    .main__submit:active {
+      box-shadow: 0 2px 3px rgba(0, 0, 0, 0.4);
+      transform: translateY(2px); }
+
+.footer {
+  font-size: .8em;
+  background-color: #7eb1b2;
+  padding: 3em 2em;
+  color: #e3dcdc;
+  text-align: center; }
+  .footer__meh {
+    font-size: .8em;
+    margin-top: .3em;
+    color: inherit; }
