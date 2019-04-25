@@ -11,28 +11,20 @@
         </h1>
     </header>
     
-    <div class="intro">
-        <p class="intro__para">
-            
-            INTRO HERE
-            
-        </p>
-    </div>
     
     <div class="main">
         
         <div class="results">
             
             <ul class="results__list">
-               
-               
+                      
                 <% if (names.length > 1) { %>
                     
-                    <h3 class="results__heading" style="margin-bottom: 1em;">You searched for <%= names.length %> baby names</h3>
+                    <h3 class="results__heading" style="margin-bottom: 1em;">You searched for <%= names.length %> baby names from <%= names[0].region %></h3>
 
                     <% names.forEach(name => { %>
                     
-                        <li class="results__item">Your baby&apos;s name is <%= name.name %> and your baby is from <%= name.region %>. 
+                        <li class="results__item">Your baby&apos;s name is <span class="results__name"><a target="_blank" class="results__link" href="https://nameberry.com/babyname/<%= name.name %>" title="what does this name mean?"><%= name.name %></a></span>
                         
                             <% if (name.email) { %> 
                                 Your baby&apos;s email address is <%= name.email %>
@@ -44,9 +36,9 @@
                       
                 <% }  else if (names) { %>
                   
-                   <h3 class="results__heading" style="margin-bottom: 1em;">You searched for 1 baby name</h3>
+                   <h3 class="results__heading" style="margin-bottom: 1em;">You searched for 1 baby name from <%= names.region %></h3>
                 
-                   <li class="results__item">Your baby&apos;s name is <%= names.name %> and your baby is from <%= names.region %>
+                   <li class="results__item">Your baby&apos;s name is <span class="results__name"><a target="_blank" class="results__link" href="https://nameberry.com/babyname/<%= names.name %>" title="what does this name mean?"><%= names.name %></a></span>
                    
                        <% if (names.email) { %> 
                             Your baby&apos;s email address is <%= names.email %>
@@ -59,12 +51,22 @@
             
         </div>
         
-        <a href="/" class="results__repeat">Search Again</a>
+        
+        
+        <div class="main__submit-wrap">
+            <a href="/" class="results__repeat">
+                <button class="main__submit">Search Again</button>
+            </a>
+        </div>
+        
+        
         
     </div>
     
     <% include ../partials/footer.ejs %>
     
     <script src="/js/script.js"></script>
+    <script src="/js/TweenMax.min.js"></script>
+    
 </body>
 </html>
