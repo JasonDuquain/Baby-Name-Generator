@@ -51,6 +51,11 @@ body {
   display: flex;
   flex-direction: column; }
 
+[class$="__link"], [class$="__link"]:visited {
+  color: #6ea7a8; }
+  [class$="__link"]:hover, [class$="__link"]:visited:hover {
+    color: #4c7d7e; }
+
 .header {
   padding: 3em 2em;
   background-image: url(../img/header-bg.jpg);
@@ -66,12 +71,8 @@ body {
   padding: 3em 2em;
   line-height: 1.8; }
   .intro__para {
-    width: 55%;
+    width: 65%;
     margin: 0 auto; }
-  .intro__link, .intro__link:visited {
-    color: #6ea7a8; }
-    .intro__link:hover, .intro__link:visited:hover {
-      color: #4c7d7e; }
 
 .main {
   flex: 1; }
@@ -120,6 +121,7 @@ body {
     text-align: center; }
   .main__submit {
     padding: .6em 1em;
+    margin-bottom: 2em;
     font: inherit;
     color: #fff;
     background-color: #dea78d;
@@ -140,7 +142,14 @@ body {
   padding: 3em 2em;
   color: #e3dcdc;
   text-align: center; }
-  .footer__meh {
-    font-size: .8em;
-    margin-top: .3em;
-    color: inherit; }
+
+/*************  RESULTS PAGE  ***************/
+.results {
+  padding: 4em 2em;
+  text-align: center; }
+  .results__heading {
+    margin-bottom: 3em !important; }
+  .results__item + .results__item {
+    margin-top: 1em; }
+  .results__name {
+    font-family: 'claire_handbold'; }

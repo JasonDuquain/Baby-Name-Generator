@@ -90,7 +90,27 @@ describe('routes : baby', () => {
             });
         }); // it('should have the text "find names"')
         
-    }); // describe('GET /baby')
+    }); // describe('GET /baby');
+    
+    describe('POST /baby?gender=female&region=england&amount=5', () => {
+
+        it('should return baby list with an anchor tag in the name(s)', (done) => {
+            request({
+                method: 'POST',
+                url: `${base}/baby`,
+                form: {
+                    gender: 'female',
+                    region: 'england',
+                    amount: 5
+                }
+            }, (error, response) => {
+                expect(response.body).toContain('what does this name mean');
+                expect(error).toBeNull();
+                done();
+            });
+        }); // it('should return baby list with an anchor tag in the name(s)')
+
+    }); // describe('POST /baby?gender=female&region=england&amount=5')
 
 
 }); // describe('routes : baby')

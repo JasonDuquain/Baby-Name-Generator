@@ -72,6 +72,15 @@ body {
     flex-direction: column;
 }
 
+[class$="__link"], [class$="__link"]:visited {
+    color: darken($primaryColor, 15%);
+
+    &:hover {
+       color: darken($primaryColor, 30%); 
+    }
+
+}
+
 .header {
     padding: 3em 2em; 
     background-image: url(../img/header-bg.jpg);
@@ -91,19 +100,10 @@ body {
     line-height: 1.8;
     
     &__para {
-        width: 55%;
+        width: 65%;
         margin: 0 auto;
     }
     
-    &__link, &__link:visited {
-        color: darken($primaryColor, 15%);
-               
-        &:hover {
-           color: darken($primaryColor, 30%); 
-        }
-      
-    }
-
 }
 
 .main {
@@ -176,6 +176,7 @@ body {
     
     &__submit {
         padding: .6em 1em;
+        margin-bottom: 2em;
         font: inherit;
         color: #fff;
         background-color: darken($secondaryColor, 20%);
@@ -198,18 +199,35 @@ body {
     
 }
 
-
 .footer {
     font-size: .8em;
     background-color: darken($primaryColor, 10%);
     padding: 3em 2em;
     color: #e3dcdc;
     text-align: center;
+
+}
+
+/*************  RESULTS PAGE  ***************/
+
+.results {
+    padding: 4em 2em;
+    text-align: center;
     
-    &__meh {
-        font-size: .8em; 
-        margin-top: .3em;
-        color: inherit;
+    &__heading {
+        margin-bottom: 3em !important;
+    }
+    
+    &__item + &__item {
+        margin-top: 1em;
+    }
+    
+    &__name {
+        font-family: 'claire_handbold';
     }
     
 }
+
+
+
+
